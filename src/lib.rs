@@ -4,6 +4,9 @@ pub use crate::block::Block;
 mod hashable;
 pub use crate::hashable::Hashable;
 
+mod blockchain;
+pub use crate::blockchain::Blockchain;
+
 use std::time::{SystemTime, UNIX_EPOCH};
 
 type BlockHash = Vec<u8>;

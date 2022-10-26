@@ -16,12 +16,13 @@ impl Debug for Block {
     fn fmt(&self, f: &mut Formatter) -> fmt::Result {
         write!(
             f,
-            "Block[{}]: {} at: {} with: {}, nonce: {}",
+            "Block[{}]: {} at: {} with: {}, nonce: {}, prev_hash: {}",
             &self.index,
             &hex::encode(&self.hash),
             &self.timestamp,
             &self.payload,
-            &self.nonce
+            &self.nonce,
+            &hex::encode(&self.prev_block_hash),
         )
     }
 }
